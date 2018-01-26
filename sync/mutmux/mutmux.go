@@ -21,8 +21,13 @@ type Lock struct {
 	xmap  map[string]*sync.Mutex
 }
 
-// Init will initialize the Mutmux.
-func (s Mutmux) Init() Mutmux {
+// Init will create and initialize the Mutmux.
+func Init() Mutmux {
+	return Mutmux{}.init()
+}
+
+// init will initialize an existing Mutmux.
+func (s Mutmux) init() Mutmux {
 	s.mutex = &sync.Mutex{}
 	s.xmap = make(map[string]*sync.Mutex)
 	return s
