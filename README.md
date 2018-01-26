@@ -3,6 +3,9 @@ Mutex Multiplexer for synchronized concurrent accesses to a set of shared resour
 
 ## use
 ```
+// create Mutmux
+var mmux = mutmux.Init()
+
 // get lock before using shared resource
 lock := mmux.GetLock(filename)
 
