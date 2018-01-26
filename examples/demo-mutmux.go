@@ -28,13 +28,11 @@ func work(filename string, id int) {
 
 	// get lock before using shared resource
 	lock := mmux.GetLock(filename)
+	defer lock.Release()
 
 	fmt.Println(id, ": lock acquired")
 	useResource(filename)
-	fmt.Println(id, ": lock released")
-
-	// release the lock when you are done
-	lock.Release()
+	fmt.Println(id, ": releasing lock")
 }
 
 func useResource(path string) {
