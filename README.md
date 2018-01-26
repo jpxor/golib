@@ -1,4 +1,4 @@
 # go-mutmux
-Synchronize concurrent accesses to a set of resources. Named for "Mutex Multiplexer", although Go channels are used for synchronization instead of mutexes.
+Mutex Multiplexer for synchronized concurrent accesses to a set of resources. The original use case was to handle many go routines performing io operations on a set of many files in undeterministic fashion.
 
 # use
