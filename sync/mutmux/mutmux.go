@@ -15,7 +15,7 @@ type Mutmux struct {
 }
 
 // Lock ensures mutual exclusion to the named resource
-// and provides a means of releasing the lock.
+// and ensures only the owner of the lock can release it.
 type Lock struct {
 	resid *string
 	xmap  map[string]*sync.Mutex
