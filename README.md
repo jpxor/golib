@@ -1,5 +1,5 @@
 # jpxor Golib
-Library of useful Go packages. 
+Library of useful services, tools, and structures written for Go.
 - mutmux
 - pubsub
 
