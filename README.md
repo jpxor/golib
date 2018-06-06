@@ -51,5 +51,5 @@ for {
 }
 
 // Unsubscribe using receiver id
-relay.Unsubscribe("demo", rid)
+ps.Unsubscribe("demo", rid)
 ```
